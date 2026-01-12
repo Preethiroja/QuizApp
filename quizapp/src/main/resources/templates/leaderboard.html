@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h2>🏆 Leaderboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>User ID</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="s, iterStat : ${scores}">
+                    <td th:text="${iterStat.count}">1</td>
+                    <td th:text="${s.userId}">ID</td>
+                    <td><span class="badge" th:text="${s.score}">0</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <a href="/quiz">Play Again</a>
+    </div>
+</body>
+</html>

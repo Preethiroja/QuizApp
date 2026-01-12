@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Java & Spring Quiz</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .question-box { text-align: left; margin-bottom: 25px; padding: 15px; border-bottom: 1px solid #eee; }
+        .auth-card { max-width: 600px; } /* Making it wider for questions */
+    </style>
+</head>
+<body>
+    <div class="auth-card">
+        <h2>Java Quiz</h2>
+        <form th:action="@{/submitQuiz}" method="post">
+            
+            <div class="question-box">
+                <p><strong>1. Which keyword is used to create an object in Java?</strong></p>
+                <input type="radio" name="q1" value="new" required> new<br>
+                <input type="radio" name="q1" value="alloc"> alloc
+            </div>
+
+            <div class="question-box">
+                <p><strong>2. Spring Boot is used for?</strong></p>
+                <input type="radio" name="q2" value="web" required> Web Apps<br>
+                <input type="radio" name="q2" value="os"> Operating Systems
+            </div>
+
+            <div class="question-box">
+                <p><strong>3. Which annotation marks the main entry point of a Spring Boot app?</strong></p>
+                <input type="radio" name="q3" value="boot" required> @SpringBootApplication<br>
+                <input type="radio" name="q3" value="comp"> @Component
+            </div>
+
+            <div class="question-box">
+                <p><strong>4. What is the default port of Spring Boot?</strong></p>
+                <input type="radio" name="q4" value="8080" required> 8080<br>
+                <input type="radio" name="q4" value="3306"> 3306
+            </div>
+
+            <div class="question-box">
+                <p><strong>5. Which of these is NOT a pillar of OOP?</strong></p>
+                <input type="radio" name="q5" value="comp" required> Compilation<br>
+                <input type="radio" name="q5" value="poly"> Polymorphism
+            </div>
+
+            <div class="question-box">
+                <p><strong>6. JDK stands for?</strong></p>
+                <input type="radio" name="q6" value="kit" required> Java Development Kit<br>
+                <input type="radio" name="q6" value="data"> Java Data Kernel
+            </div>
+
+            <div class="question-box">
+                <p><strong>7. Which company developed Java?</strong></p>
+                <input type="radio" name="q7" value="sun" required> Sun Microsystems<br>
+                <input type="radio" name="q7" value="ms"> Microsoft
+            </div>
+
+            <div class="question-box">
+                <p><strong>8. What does JPA stand for?</strong></p>
+                <input type="radio" name="q8" value="api" required> Java Persistence API<br>
+                <input type="radio" name="q8" value="app"> Java Process App
+            </div>
+
+            <div class="question-box">
+                <p><strong>9. In Java, 'String' is a?</strong></p>
+                <input type="radio" name="q9" value="class" required> Class<br>
+                <input type="radio" name="q9" value="prim"> Primitive Type
+            </div>
+
+            <div class="question-box">
+                <p><strong>10. Which tool is used to build Spring Boot projects?</strong></p>
+                <input type="radio" name="q10" value="maven" required> Maven<br>
+                <input type="radio" name="q10" value="mysql"> MySQL
+            </div>
+
+            <button type="submit" class="auth-btn">Finish & See Result</button>
+        </form>
+    </div>
+</body>
+</html>

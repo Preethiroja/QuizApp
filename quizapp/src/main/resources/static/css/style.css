@@ -1,0 +1,107 @@
+/* --- GLOBAL STYLES (Keep the same background) --- */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --accent: #6c5ce7;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--primary-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- LOGIN & REGISTER CARD STYLES --- */
+.auth-card {
+    background: var(--glass-bg);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-card h2 {
+    color: #2d3436;
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.auth-card p {
+    color: #636e72;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Input Fields for Login/Register */
+.auth-input {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 10px 0;
+    border: 2px solid #f1f2f6;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.auth-input:focus {
+    border-color: var(--accent);
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(108, 92, 231, 0.1);
+}
+
+/* Buttons */
+.auth-btn {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    box-shadow: 0 8px 15px rgba(118, 75, 162, 0.2);
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(118, 75, 162, 0.3);
+}
+
+.auth-link {
+    display: block;
+    margin-top: 20px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* --- LEADERBOARD STYLES (Kept exactly as you liked) --- */
+.card {
+    background: white; padding: 30px; border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center;
+}
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th { color: #888; font-size: 12px; text-transform: uppercase; padding: 10px; }
+td { padding: 12px; border-bottom: 1px solid #eee; }
+.badge { background: #6c5ce7; color: white; padding: 4px 12px; border-radius: 20px; font-weight: bold; }
